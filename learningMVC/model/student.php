@@ -1,5 +1,5 @@
 <?php
-
+include ('./../config.php');
 class studentModel
 {
     function addStudent()
@@ -16,18 +16,13 @@ class studentModel
     }
     function getStudent()
     {
-        $conn = mysqli_connect("thuctapphp.com", "root", "1", "thuctapPHP");
-    
+        //$conn = mysqli_connect("thuctapphp.com", "root", "1", "thuctapPHP");
         $sql = "SELECT * from student";
         $result = mysqli_query($conn, $sql);
-        $row=mysqli_fetch_assoc($result);
-        if($result){
-            return mysqli_fetch_assoc($result);
-            // var_dump(1, mysqli_fetch_assoc($result));
-            // die;
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
         }
+        return $data;
     }
-    
 }
-// $test = new studentModel();
-// $test->getStudent();
+
