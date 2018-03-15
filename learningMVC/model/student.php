@@ -1,8 +1,5 @@
 <?php
-require 'config.php';
-/**
-* 
-*/
+
 class studentModel
 {
     function addStudent()
@@ -19,13 +16,18 @@ class studentModel
     }
     function getStudent()
     {
-      $sql=mysqli_query($conn,"SELECT * FROM student ");
-      $count = mysqli_num_rows($sql);
-      
-        return mysqli_fetch_assoc($sql);
-        
+        $conn = mysqli_connect("thuctapphp.com", "root", "1", "thuctapPHP");
+    
+        $sql = "SELECT * from student";
+        $result = mysqli_query($conn, $sql);
+        $row=mysqli_fetch_assoc($result);
+        if($result){
+            return mysqli_fetch_assoc($result);
+            // var_dump(1, mysqli_fetch_assoc($result));
+            // die;
+        }
     }
-    // $stu = new studentModel();
-    // $stu->getStudent();
+    
 }
-?>
+// $test = new studentModel();
+// $test->getStudent();

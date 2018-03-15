@@ -1,12 +1,13 @@
 <?php 
-echo "string";
-include("/model/student.php");
+
+include("./../model/student.php");
 class studentController{
     function listStudent(){
-        $m_student=new studentModel();
+        $m_student = new studentModel();
         $name=$m_student->getStudent();
-        //return array('name'=>$name['studentName']);
-        echo $name;
+
+        //return array('name'-> $name['studentName']);
+        return $name;
     }
 }
 ?>

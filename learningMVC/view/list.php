@@ -13,10 +13,11 @@
 		</tr>
 
 		<?php
-		include ('studentController.php');
-		 $c_student = new studentController();
-		 $name = $c_student->listStudent();
-		foreach ($name as $name) {?>
+		include ('./../controller/studentController.php');
+
+		$c_student = new studentController();
+		$std = $c_student->listStudent();
+		foreach ($std as $name) {?>
 			<tr>	
 				
 				<td><?php  echo $name; ?></td>
