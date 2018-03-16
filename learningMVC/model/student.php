@@ -24,7 +24,7 @@ class studentModel
     {
         
         $conn = mysqli_connect("thuctapphp.com", "root", "1", "thuctapPHP");
-        $sql = "SELECT * from student";
+        $sql = "SELECT * FROM student";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
             $data[] = $row;

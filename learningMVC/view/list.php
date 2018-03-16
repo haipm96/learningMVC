@@ -7,7 +7,7 @@
 			<th>Action</th>
 		</tr>
 		<?php
-		include './../controller/studentController.php';
+		include '../controller/studentController.php';
 		$c_student = new studentController();
 		$std = $c_student->listStudent();
 		foreach ($std as $name) {?>
