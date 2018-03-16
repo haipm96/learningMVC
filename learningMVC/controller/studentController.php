@@ -1,6 +1,6 @@
 <?php 
 
-include("./../model/student.php");
+include './../model/student.php';
 class studentController{
     function listStudent(){
         $m_student = new studentModel();
