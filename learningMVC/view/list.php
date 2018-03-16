@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Danh sach sinh vien</title>
-</head>
-<body>
+
 	<a href="">Them sinh vien</a>
 	<table border="1">
 		<tr>
@@ -24,5 +19,3 @@
 		<?php }
 		?>
 	</table>
-</body>
-</html>
